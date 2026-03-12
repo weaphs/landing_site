@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Запис на заняття з Йоги</title>
+        <link rel="stylesheet" href="index.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" >
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="logo"> <img src="images/red_logo.png" height="100"></img></div>
+            <h1> Yoga With Silina Alina</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Головна</a></li>
+                    <li><a href="#benefits">Переваги</a></li>
+                    <li><a href="#about">Про мене</a></li>
+                    <li><a href="#class-info">Про заняття</a></li>
+                    <li><a class="featured-link" href="#registration-form">Записатися</a></li>
+                </ul>
+            </nav>
+            <div class="nav"></div>
+        </header>
+        <div class="main">
+            <div id="hero">
+                <div class="short-info">
+                    <p>
+                        <h2>15 липня, м. Золочів</h2>
+                        <em>Безкоштовне пробне заняття з йоги на природі.</em><br>
+                        <em>Запрошуємо на відкрите заняття біля озера у місті Золочів.
+                        Свіже повітря, легка практика та атмосфера спокою
+                        допоможуть вам відновити енергію та познайомитися з йогою.</em>
+                    </p>
+                </div>
+                <div id="registration-form">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ім'я</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Вік</label>
+                            <input type="number" class="form-control" id="age" name="age" placeholder="Ваш вік" min="10" max="100">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="reminder" name="reminder">
+                            <label class="form-check-label" for="reminder">Нагадати мені про заняття</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Записатися на заняття</button>
+                    </form>
+                </div>
+            </div>
+            <div id="benefits">
+                <div class="benefits-title">
+                    <h3><em>Переваги цього заняття:</em></h2>
+                </div>
+                <div class="benefits-list">
+                    <div class="benefits-card">
+                        <image src="images/icon-air.png"></image> 
+                        <p>Заняття проходить біля озера на природі.</p>
+                    </div>
+                    <div class="benefits-card">
+                        <image src='images/icon-beginers.png'></image> 
+                        <p>Заняття підходить навіть якщо ви ніколи не займались йогою.</p>
+                    </div>
+                    <div class="benefits-card">
+                        <image src='images/icon-antistress.png'></image> 
+                        <p>Практика допомагає розслабитись та відновити енергію.</p>
+                    </div>
+                    <div class="benefits-card">
+                        <image src='images/icon-free.png'></image> 
+                        <p>Перше заняття абсолютно безкоштовне.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="about">
+                <div class="about-picture">
+                    <img src="images/about.jpg"></img>
+                </div>
+                <div class="about-text">
+                    <h3><em>Про мене!</em></h3>
+                    <p>
+                        <em>Мене звати Аліна. Мені 30 років, і вже понад 5 років йога є важливою частиною мого життя.</em>
+                    </p>
+                    <p>
+                        <em>Я маю вищу педагогічну освіту за спеціальністю «Фізичне виховання», а також медичну освіту,
+                        що допомагає мені краще розуміти роботу тіла та безпечно підходити до фізичних навантажень.</em>
+                    </p>
+                    <p>
+                        <em>На заняттях я створюю спокійну та підтримуючу атмосферу, де кожен може познайомитися з йогою
+                        та своїм тілом у комфортному темпі.</em>
+                    </p>
+                </div>
+                <div class="about-picture2">
+                    <img src="images/yoga2.jpg">
+                    <img src="images/yoga3.jpg">
+                </div>
+            </div>
+            <div id="class-info" >
+                <h3><em>Про практику:</em></h3>
+                <table class="table">
+                    <tr>
+                        <td>Формат заняття</td><td>М'яка хатха-йога</td>
+                    </tr>
+                      <tr>
+                        <td>Тривалість</td><td>60 хвилин</td>
+                    </tr>
+                      <tr>
+                        <td>Практики</td><td>Асани, дихальні практики</td>
+                    </tr>
+                      <tr>
+                        <td>Рівень</td><td>Підходить для початківців</td>
+                    </tr>
+                      <tr>
+                        <td>Локація</td><td>На природі біля озера</td>
+                    </tr>
+                    </tr>
+                      <tr>
+                        <td>Що треба мати</td><td>Спортивний одяг, килимок</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer-logo">
+                <img src="images/red_logo.png" height="100"></img>
+            </div>
+            <div  class="footer-contacts" class="mt-3">
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-1"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-telegram fs-1"></i></a>
+            </div>
+            <div class="footer-rights">
+                <p class="mt-3">© 2026 Yoga with Silina Alina</p>
+            </div>
+        </div>
+    </body>
+</html>
