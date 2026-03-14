@@ -17,255 +17,411 @@ body {
     overflow: auto;
     margin: 0; 
 }
-
 .page-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 80px;
     z-index: 1000;
     display: flex;
-    color:#a17c1f;
-    background-color:rgba(255, 110, 235, 0.60);
-    text-align: center;
-    align-items: center
-}
-.page-header .logo{
-    flex: 0 0 20%;
-    padding: 10px;
-}
-.page-header h1{
-    flex: 0 0 40%;
-    color: #333333;
-    text-align: center;
-    padding: 10px;
-    border-radius: 2rem;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-}
-
-.page-header nav {
-    flex: 0 0 40%;
-    
-}
-
-.page-header nav ul {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px; 
-    list-style: none;
-    padding: 0;
+    justify-content: space-between;
+
+    background-color: rgba(255, 110, 235, 0.60);
+}
+
+.page-header .logo{
+    padding-left: 10px;
+}
+
+.page-header h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
     margin: 0;
-
 }
 
-.page-header a  {
+.menu-toggle {
+    border: none;
+    background: transparent;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.menu-toggle::after {
+    content: "\2261";
+}
+
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: black;
+    z-index: 999;
+}
+
+.menu.is-open .menu-dropdown {
     display: block;
-    color:rgb(66, 67, 67);
-    padding: 10px; 
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10%;
-
 }
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
 a.featured-link {
     background-color: #154529e3;
     color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
 }
 
-.main {
-    margin-top: 0px;
+.main{
+    margin-top: 80px;
 }
 
-#hero {
-    display: flex;
-    color: rgb(1, 1, 1);
-    background: url("images/nature.jpg");
-    background-size: 100% 100%;
-
-}
-
-#hero .short-info {
-    width: 60%;
-    background-color: rgba(254, 254, 254, 0.60);
-    border-radius: .5em;
-    margin-left: 2rem;
-    margin-right: 10rem;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
-    padding: 2rem;
+.short-info{
     text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 1.3rem;
+    margin: 5px;  
 }
 
-#hero #registration-form {
-    width: 40%;
-    background-color: rgba(254, 254, 254, 0.60);
-    border-radius: .5em;
-    padding: 1.5em;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
-}
-#hero #registration-form form {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-    text-transform: uppercase;
-    color: rgb(0, 0, 0);          
+#registration-form {
+    background-color: #8fecb6e3;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #benefits {
-    margin-top: 50px;
-}
-
-.benefits-title{
-    padding: 1rem;
+    margin-top: 10px;
     text-align: center;
-    font-size: 1.2rem;
+    padding: 10px;
 }
 
-.benefits-list {
-    display: flex;
-    font-size: 1.2rem;
+#benefits img {
+    display: none;
 }
 
-.benefits-card > *+*{
-    margin: 1rem;
+#benefits p {
+    text-align: left;
+    text-indent: 5px;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 0.95em;
 }
 
-.benefits-card{
-    padding: 1rem;
-    text-align: center;
+#about img {
+    display: none;
 }
 
-#about {
-    display: flex;
-    margin-top: 100px;
-}
-
-#about .about-picture {
-    padding: 0;
-    flex: 33.3%;
-}
-
-#about .about-picture img {
-    max-width: 100%;
-    height: 100%;
-    display: block;
-}
-
-
-#about .about-text {
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
-    flex: 33.3%;
+.about-text {
+    margin-top: 10px;
+    padding: 15px;
     text-align: justify;
-    font-size: 1.2rem;
 }
 
-#about .about-text  h3 {
+.about-text h3 {
     text-align: center;
-}
-
-#about .about-text  p {
-    text-indent: 1.5em;
-}
-
-#about .about-picture2 {
-    flex: 33.3%;
-}
-
-#about .about-picture2 img {
-    max-width: 100%;
-}
-
-#about .about-picture2 img *+*{
-    margin: 0;
 }
 
 #class-info {
-    margin-top: 100px;
+    margin-top: 10px;
+    padding: 15 px;
+    text-align: justify;
+}
+
+#class-info {
     text-align: center;
-    font-size: 1.2rem;
-}
-
-table{
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-/* table, th, td {
-  border: 3px solid black !important;
-  border-collapse: collapse;
-  
-} */
-.table {
-    width: 600%;
-    max-width: 800px;
-    margin: 30px auto;
-    border-collapse: collapse;
-    font-family: "Poppins", sans-serif;
-    background-color: #f9fbfa;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.table td {
-    padding: 14px 18px;
-    border-bottom: 1px solid #e6efe9;
-}
-
-.table tr:last-child td {
-    border-bottom: none;
-}
-
-.table td:first-child {
-    font-weight: 600;
-    color: #4f6f65;
-    width: 40%;
-}
-
-.table td:last-child {
-    color: #555;
-}
-
-.table tr:hover {
-    background-color: #eef6f2;
-    transition: 0.3s;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #footer {
     display: flex;
     background-color: black;
 }
-
 #footer .footer-logo {
-    padding-top: 10px;
-    padding-left: 20px;
-    flex: 33.3%;
+    display: none;
 }
-
 #footer .footer-contacts {
     text-align: center;
     color: white;
-    flex: 33.3%;
-    margin-top: 25px;
+    flex: 50%;
+    margin-top: 10px;
 }
 
 #footer .footer-rights {
-    margin-top: 25px;
+    margin-top: 5px;
     margin-right: 25px;
-    text-align: right;
-    flex: 33.3%;
+    text-align: center;
+    flex: 50%;
     color: white;
-}
+ }
 
+
+
+
+@media (min-width: 35em){
+    .page-header {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-dropdown {
+        display: flex;
+        position: static;
+        background: transparent;
+        width: auto;
+        
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu li {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px;
+        color: rgb(92, 92, 92);
+        text-decoration: none;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin-right: 0.5em;
+        font-size: 1em;
+    }
+
+    a.featured-link {
+        background-color: #154529e3;
+        color: rgb(255, 255, 255);
+        font-family: "Poppins", sans-serif;
+    }
+
+    .main {
+        margin-top: 0px;
+    }
+
+    #hero {
+        display: flex;
+        color: rgb(1, 1, 1);
+        background: url("images/nature.jpg");
+        background-size: 100% 100%;
+
+    }
+
+    #hero .short-info {
+        width: 60%;
+        background-color: rgba(254, 254, 254, 0.60);
+        border-radius: .5em;
+        margin-left: 2rem;
+        margin-right: 10rem;
+        margin-top: 15rem;
+        margin-bottom: 15rem;
+        padding: 2rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.3rem;
+    }
+
+    #hero #registration-form {
+        width: 40%;
+        background-color: rgba(254, 254, 254, 0.60);
+        border-radius: .5em;
+        padding: 1.5em;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-top: 15rem;
+        margin-bottom: 15rem;
+    }
+    #hero #registration-form form {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+        text-transform: uppercase;
+        color: rgb(0, 0, 0);          
+    }
+
+    #benefits {
+        margin-top: 50px;
+    }
+
+    #benefits img {
+        display: block;
+    }
+
+    .benefits-title{
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .benefits-list {
+        display: flex;
+        font-size: 1.2rem;
+    }
+
+    .benefits-card > *+*{
+        margin: 1rem;
+    }
+
+    .benefits-card{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #benefits p {
+    text-align: center;
+    text-indent: 0px;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1em;
+    }
+
+    #about {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    #about .about-picture {
+        padding: 0;
+        flex: 33.3%;
+    }
+
+    #about .about-picture img {
+        max-width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+
+    #about .about-text {
+        margin-top: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+        flex: 33.3%;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    #about .about-text  h3 {
+        text-align: center;
+    }
+
+    #about .about-text  p {
+        text-indent: 1.5em;
+    }
+
+    #about .about-picture2 {
+        display: block;
+        flex: 33.3%;
+    }
+
+    #about .about-picture2 img {
+        display: block;
+        max-width: 100%;
+    }
+
+    #about .about-picture2 img *+*{
+        margin: 0;
+    }
+
+    #class-info {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    table{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    /* table, th, td {
+    border: 3px solid black !important;
+    border-collapse: collapse;
+    
+    } */
+    .table {
+        width: 600%;
+        max-width: 800px;
+        margin: 30px auto;
+        border-collapse: collapse;
+        font-family: "Poppins", sans-serif;
+        background-color: #f9fbfa;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .table td {
+        padding: 14px 18px;
+        border-bottom: 1px solid #e6efe9;
+    }
+
+    .table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table td:first-child {
+        font-weight: 600;
+        color: #4f6f65;
+        width: 40%;
+    }
+
+    .table td:last-child {
+        color: #555;
+    }
+
+    .table tr:hover {
+        background-color: #eef6f2;
+        transition: 0.3s;
+    }
+
+    #footer {
+        display: flex;
+        background-color: black;
+    }
+
+    #footer .footer-logo {
+        padding-top: 10px;
+        padding-left: 20px;
+        flex: 33.3%;
+    }
+
+    #footer .footer-contacts {
+        text-align: center;
+        color: white;
+        flex: 33.3%;
+        margin-top: 25px;
+    }
+
+    #footer .footer-rights {
+        margin-top: 25px;
+        margin-right: 25px;
+        text-align: right;
+        flex: 33.3%;
+        color: white;
+    }
+}
