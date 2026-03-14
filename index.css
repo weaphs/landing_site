@@ -46,6 +46,7 @@ body {
     background: transparent;
     font-size: 2.5rem;
     padding: 10px;
+    color: black;
 }
 
 .menu-toggle::after {
@@ -58,7 +59,7 @@ body {
     top: 80px;
     left: 0;
     width: 100%;
-    background: black;
+    background: rgba(0, 0, 0, 0.722);
     z-index: 999;
 }
 
@@ -405,6 +406,7 @@ a.featured-link {
     }
 
     #footer .footer-logo {
+        display: block;
         padding-top: 10px;
         padding-left: 20px;
         flex: 33.3%;
